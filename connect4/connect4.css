@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0D1117; /* Dark background for better contrast */
+    color: white;
+    padding: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px); /* Create a grid layout with 7 columns */
+    gap: 5px;
+    margin: 20px auto;
+    width: 420px; /* Width should accommodate all columns */
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    background-color: #1e2533; /* Slightly visible background for each tile */
+    border: 2px solid #0c0f14; /* Dark border for each tile */
+    position: relative; /* Necessary for absolute positioning of discs */
+}
+
+.disc {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc; /* Neutral color to highlight the disc */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.red-piece { background-color: #e74c3c; }
+.yellow-piece { background-color: #f1c40f; }

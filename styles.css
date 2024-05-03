@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Evil Empire';
+    src: url('./fonts/Evil Empire.otf') format('opentype'); /* Correct format declaration */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #013991; /* Dark blue background */
+    font-family: Arial, sans-serif; /* Fallback font */
+}
+
+.outerBody {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #013991 0%, #0162c8 100%);
+}
+
+.innerLining {
+    width: 80vw; /* Optimal width for better layout control */
+    height: 90vh; /* Optimal height */
+    background-color: #F8C9FF; 
+    display: flex;
+    flex-direction: column; /* Changed to column for better structural management */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.screen {
+    background-color: #020308; /* Darker shade for contrast */
+    width: 95%; /* Full width of innerLining */
+    height: 80%; /* Optimal height for content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; /* Improved spacing */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5); /* Inner shadow for depth */
+}
+
+.screen p {
+    font-family: 'Evil Empire', sans-serif;
+    font-size: 48px; /* Adjusted for better legibility */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.gameSet1, .gameSet2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Utilize full width for alignment */
+}
+
+.game1, .game2, .game3 {
+    width: 30%; /* Equal width for each game */
+    height: 200px; /* Height adjustment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.game1 a, .game2 a, .game3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.game1 img, .game2 img, .game3 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+}
+
+.game1 img:hover, .game2 img:hover, .game3 img:hover {
+    transform: scale(1.1); /* Subtle zoom on hover */
+    cursor: pointer;
+}

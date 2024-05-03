@@ -1,0 +1,32 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #f0f0f0; /* Light background for the day theme */
+    transition: background-color 0.5s ease; /* Smooth transition for theme change */
+}
+
+canvas {
+    background-color: #000000; /* Dark background for the board */
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #333; /* Dark border to fit night mode */
+    transition: border-color 0.5s ease; /* Smooth transition for border color change */
+}
+
+/* Responsive design for different devices */
+@media (max-width: 600px) {
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Style adjustments for different times of the day */
+.daytime {
+    background-color: #bada55; /* Lighter and cheerful for day */
+}
+
+.nighttime {
+    background-color: #333; /* Darker for night */
+    color: #fff; /* Light text for better readability at night */
+}
